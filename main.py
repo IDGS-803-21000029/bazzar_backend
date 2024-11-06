@@ -8,8 +8,25 @@ from models.schemas import ProductSchema, SaleSchema
 from typing import List
 from pydantic import BaseModel
 import json
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Configuración de CORS
+origins = [
+    "http://localhost",  # Habilita localhost (útil para pruebas locales)
+    "http://177.228.62.53:5173",  # Habilita localhost en un puerto específico (ej., React/Angular en el puerto 3000)
+    #"https://tu-dominio.com",  # Habilita tu dominio de producción
+    # Puedes agregar más dominios según tus necesidades
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Permite los orígenes definidos en la lista
+    allow_credentials=True,  # Permite el envío de cookies
+    allow_methods=["*"],  # Permite todos los métodos HTTP (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"],  # Permite todos los encabezados
+)
 
 # Crea las tablas en la base de datos
 Base.metadata.create_all(bind=engine)
