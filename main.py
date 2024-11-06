@@ -108,7 +108,7 @@ def add_sale(request: SaleRequest, db: Session = Depends(get_db)):
 
 @app.get("/api/sales/", response_model=List[SaleSchema])
 def get_sales(db: Session = Depends(get_db)):
-    sales = db.query(Sale).all()
+    sales = db.query(Sale).join(Product).all()
     return sales
 
 if __name__ == "__main__":

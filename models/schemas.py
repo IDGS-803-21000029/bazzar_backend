@@ -23,6 +23,7 @@ class SaleSchema(BaseModel):
     id: int
     product_id: int
     sale_date: datetime  # Usa el tipo `datetime` si prefieres manejar fechas como objetos de tiempo
+    product: ProductSchema
 
     class Config:
         orm_mode = True
