@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Obtén la clave de cifrado y la URL cifrada desde las variables de entorno
-ENCRYPTION_KEY = "RzLqZGkwvrorYhEOB9UOz2DSj6Izc-T76PhYz6ccVbU="
-ENCRYPTED_DATABASE_URL = "gAAAAABnKwm6yaAM3D9sA2BNwkL1NnsUZlr8n0g93fD7f8BMQBX5vq5aeqLPQJfM-GDPkLPva4AGCVUyqZsk4gzJ0rhbOpraEmjQEKEAOffWZPxVci78kaz2lAzfdrJKBOFhYBhP8TmskRWL_-n_tluKv3syozbYBf77t4yRu3lYB2b2Hk3Fr66j3u8UsnyP7gCXfhMnVhxVBJedLKYgFFU6H6s0NQsjpGeP1z6242OL5Z32UNyhD3nZuEJC_XpxKlJhi_ze-kqR"
+ENCRYPTION_KEY = "oiLuaj4newXDLmHUOVM_iKkHCl6Gjh_dytC-5vgx5rA="
+ENCRYPTED_DATABASE_URL = "gAAAAABnMXA3Oou0gr5R5zdzyaEcESTjUeBiec20-uLx2Xg5ucLQM7XnWUj0sm_8OeQNuPuP1Nuz3I6jZ0ajRIJoivH-HsJoDYB196C4-z92ggJq2qunDGRcx3XQNjqZMEl4BKPj-fy16JSFVdJXqrXqTHgEZ5u7tUReqRQcUhd1P2wDok1Zwdk1Lym7HvE9j0KBUUQJ9RfGJ2v6DGLqZVULV3GgI2HPY7GqJLxAzWPYPvW3-nsb5jMa7TewGFS5dfld98lc4hE2"
 
 # Inicializa el objeto de cifrado
 cipher_suite = Fernet(ENCRYPTION_KEY)
